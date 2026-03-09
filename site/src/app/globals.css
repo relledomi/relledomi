@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: #060608;
+  --color-surface: #0D0D12;
+  --color-elevated: #14141C;
+  --color-kanga: #C2185B;
+  --color-cream: #FFF8E1;
+  --color-turquoise: #00BFA5;
+  --color-chrome: #424242;
+  --color-chrome-light: #6E6E6E;
+  --color-text: #EEEEE8;
+  --color-sub: #908E82;
+  --color-muted: #5A5850;
+  --color-dim: #3A3A36;
+  --color-border: #1C1C24;
+
+  --font-display: "Archivo Black", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --spacing-section: clamp(120px, 15vh, 160px);
+  --spacing-side: clamp(20px, 5vw, 60px);
+}
+
+:root {
+  --bg: #060608;
+  --surface: #0D0D12;
+  --elevated: #14141C;
+  --kanga: #C2185B;
+  --cream: #FFF8E1;
+  --turquoise: #00BFA5;
+  --chrome: #424242;
+  --chrome-light: #6E6E6E;
+  --text: #EEEEE8;
+  --sub: #908E82;
+  --muted: #5A5850;
+  --dim: #3A3A36;
+  --border: #1C1C24;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(194, 24, 91, 0.3);
+  color: var(--cream);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
