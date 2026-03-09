@@ -1,0 +1,48 @@
+{
+    "meta": {
+        "brand_name": "Relledomi Entertainment",
+        "description": "Core design tokens for UI implementation across the immersive 3D Voxel experience."
+    },
+    "colors": {
+        "primary": {
+            "DEFAULT": "#C2185B",
+            "hover": "#A01249",
+            "foreground": "#FFF8E1"
+        },
+        "secondary": {
+            "DEFAULT": "#424242",
+            "hover": "#616161",
+            "foreground": "#FFF8E1"
+        },
+        "accent_turquoise": "#00BFA5",
+        "background_main": "#060608",
+        "background_surface": "#0D0D12",
+        "background_alt": "#14141C",
+        "text_primary": "#EEEEE8",
+        "text_secondary": "#908E82",
+        "border": "#1C1C24",
+        "vox_green": "#7CB342",
+        "vox_blue": "#42A5F5"
+    },
+    "typography": {
+        "font_family_headings": [
+            "Archivo Black",
+            "sans-serif"
+        ],
+        "font_family_body": [
+            "DM Sans",
+            "sans-serif"
+        ],
+        "font_family_mono": [
+            "IBM Plex Mono",
+            "monospace"
+        ],
+        "font_weight_bold": "700",
+        "font_weight_normal": "400"
+    },
+    "ui": {
+        "border_radius_default": "8px",
+        "border_radius_small": "4px",
+        "spacing_base_unit": "4px"
+    }
+}
