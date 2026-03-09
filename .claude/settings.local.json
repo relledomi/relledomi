@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest site --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npm install gsap @gsap/react three @react-three/fiber @react-three/drei framer-motion)",
+      "Bash(ls ~/Desktop/relledomi/site/postcss.config.*)",
+      "Bash(npm run build)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}
