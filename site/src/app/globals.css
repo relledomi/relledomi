@@ -1,79 +1,68 @@
 @import "tailwindcss";
 
-@theme inline {
-  --color-bg: #060608;
-  --color-surface: #0D0D12;
-  --color-elevated: #14141C;
-  --color-kanga: #C2185B;
-  --color-cream: #FFF8E1;
-  --color-turquoise: #00BFA5;
-  --color-chrome: #424242;
-  --color-chrome-light: #6E6E6E;
-  --color-text: #EEEEE8;
-  --color-sub: #908E82;
-  --color-muted: #5A5850;
-  --color-dim: #3A3A36;
+@theme {
+  --color-primary: #C2185B;
+  --color-primary-hover: #A01249;
+  --color-primary-foreground: #FFF8E1;
+  --color-secondary: #424242;
+  --color-secondary-hover: #616161;
+  --color-secondary-foreground: #FFF8E1;
+  --color-accent-turquoise: #00BFA5;
+  --color-background-main: #060608;
+  --color-background-surface: #0D0D12;
+  --color-background-alt: #14141C;
+  --color-text-primary: #EEEEE8;
+  --color-text-secondary: #908E82;
   --color-border: #1C1C24;
+  --color-vox-green: #7CB342;
+  --color-vox-blue: #42A5F5;
 
-  --font-display: "Archivo Black", sans-serif;
-  --font-body: "DM Sans", sans-serif;
-  --font-mono: "IBM Plex Mono", monospace;
+  --font-sans: var(--font-dm-sans), sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), monospace;
+  --font-heading: var(--font-archivo-black), sans-serif;
 
-  --spacing-section: clamp(120px, 15vh, 160px);
-  --spacing-side: clamp(20px, 5vw, 60px);
+  --radius-default: 8px;
+  --radius-small: 4px;
 }
+
+/*
+  The default theme used by Tailwind is now standard CSS variables.
+*/
 
 :root {
-  --bg: #060608;
-  --surface: #0D0D12;
-  --elevated: #14141C;
-  --kanga: #C2185B;
-  --cream: #FFF8E1;
-  --turquoise: #00BFA5;
-  --chrome: #424242;
-  --chrome-light: #6E6E6E;
-  --text: #EEEEE8;
-  --sub: #908E82;
-  --muted: #5A5850;
-  --dim: #3A3A36;
-  --border: #1C1C24;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
+  --background: var(--color-background-main);
+  --foreground: var(--color-text-primary);
 }
 
 body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--font-body);
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  /* The core experience is scroll-driven so we hide scrollbars but keep functionality */
+  scrollbar-width: none; 
 }
 
-::selection {
-  background: rgba(194, 24, 91, 0.3);
-  color: var(--cream);
+body::-webkit-scrollbar {
+  display: none;
 }
 
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 6px;
+/* Base utility for Lenis if ever needed to force styles */
+html.lenis, html.lenis body {
+  height: auto;
 }
-::-webkit-scrollbar-track {
-  background: var(--bg);
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
 }
-::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 3px;
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
 }
-::-webkit-scrollbar-thumb:hover {
-  background: var(--muted);
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }

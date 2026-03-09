@@ -1,27 +1,15 @@
-import Nav from "@/components/Nav";
-import FilmGrain from "@/components/FilmGrain";
-import Hero from "@/components/sections/Hero";
-import StreetGames from "@/components/sections/StreetGames";
-import TheFormat from "@/components/sections/TheFormat";
-import Agency from "@/components/sections/Agency";
-import ForBrands from "@/components/sections/ForBrands";
-import Contact from "@/components/sections/Contact";
-import Footer from "@/components/Footer";
+import Experience from "@/components/Experience";
+// import { ScrollController } from "@/components/ScrollController";
+import { TitleScreen } from "@/components/overlays/TitleScreen";
+import { FallSequence } from "@/components/scene/FallSequence";
 
 export default function Home() {
   return (
-    <>
-      <FilmGrain />
-      <Nav />
-      <main>
-        <Hero />
-        <StreetGames />
-        <TheFormat />
-        <Agency />
-        <ForBrands />
-        <Contact />
-      </main>
-      <Footer />
-    </>
+    <main className="relative w-full h-screen overflow-hidden bg-background-main">
+      <Experience />
+      {/* <ScrollController /> */}
+      <TitleScreen />
+      <FallSequence />
+    </main>
   );
 }
