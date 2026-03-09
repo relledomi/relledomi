@@ -38,10 +38,36 @@ export function BaseScene() {
                 <meshStandardMaterial color="#FFF8E1" /> {/* Cream */}
             </mesh>
 
-            {/* Floor */}
-            <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -1, -60]}>
-                <planeGeometry args={[20, 200]} />
-                <meshStandardMaterial color="#14141C" />
+            {/* Floor Sections */}
+
+            {/* Stop 1 Area */}
+            <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.1, 0]}>
+                <planeGeometry args={[40, 40]} />
+                <meshStandardMaterial color="#1a1a24" /> {/* Dark bluish */}
+            </mesh>
+
+            {/* Travel Path */}
+            <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.2, -30]}>
+                <planeGeometry args={[10, 60]} />
+                <meshStandardMaterial color="#2d2d3b" /> {/* Path color */}
+            </mesh>
+
+            {/* Stop 2 Area */}
+            <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.1, -60]}>
+                <planeGeometry args={[40, 40]} />
+                <meshStandardMaterial color="#1f2c25" /> {/* Dark greenish */}
+            </mesh>
+
+            {/* Travel Path */}
+            <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.2, -90]}>
+                <planeGeometry args={[10, 60]} />
+                <meshStandardMaterial color="#2d2d3b" />
+            </mesh>
+
+            {/* Stop 3 Area */}
+            <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.1, -120]}>
+                <planeGeometry args={[40, 40]} />
+                <meshStandardMaterial color="#2c221f" /> {/* Dark reddish/warm */}
             </mesh>
         </group>
     );
