@@ -1,7 +1,7 @@
 'use client';
 
 import { useJourney } from '@/stores/useJourney';
-import gsap from 'gsap';
+import Link from 'next/link';
 
 export function TitleScreen() {
     const { state, startJourney } = useJourney();
@@ -36,6 +36,21 @@ export function TitleScreen() {
                     >
                         Business
                     </button>
+                </div>
+
+                {/* Quick links to sub-pages */}
+                <div className="mt-6 flex items-center justify-center gap-4 pointer-events-auto">
+                    <Link href="/games" className="text-xs font-mono uppercase tracking-widest text-text-secondary hover:text-primary transition-colors">
+                        Games
+                    </Link>
+                    <span className="text-border">|</span>
+                    <Link href="/shop" className="text-xs font-mono uppercase tracking-widest text-text-secondary hover:text-primary transition-colors">
+                        Shop
+                    </Link>
+                    <span className="text-border">|</span>
+                    <Link href="/teams" className="text-xs font-mono uppercase tracking-widest text-text-secondary hover:text-primary transition-colors">
+                        Teams
+                    </Link>
                 </div>
             </div>
         </div>
